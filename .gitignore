@@ -4,3 +4,15 @@ __pycache__/
 /.venv/
 /preview/
 *.pyc
+/node_modules/
+/.vite-ssg-temp/
+/.wrangler/
+/src/generated/
+/public/search-index.json
+/public/rss.xml
+/public/sitemap.xml
+/public/robots.txt
+/public/.nojekyll
+.env
+.env.*
+!.env.example

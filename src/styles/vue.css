@@ -1,0 +1,13 @@
+.toc-child { padding-left: 12px; }
+.prose .hljs-keyword,.prose .hljs-built_in { color:var(--accent); }
+.prose .hljs-string,.prose .hljs-title { color:var(--green); }
+.prose .hljs-comment { color:var(--muted); }
+.markdown-content { min-width:0; }
+.markdown-content .code-block { background:var(--pale); border-radius:3px; }
+.markdown-content .code-block pre { margin:24px 0; }
+.article-end { flex-wrap:wrap; }
+.tool-workspace input[type="text"] { min-width:0; }
+.page-intro .back-link { display:inline-block; margin-bottom:20px; }
+.prose h2,.prose h3,.prose h4 { scroll-margin-top:100px; }
+.tool-copy-status { color:var(--muted); font-size:12px; }
+@media(max-width:600px){.related-link{grid-template-columns:1fr 20px}.related-link span{grid-column:1/-1}}

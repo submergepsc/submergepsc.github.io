@@ -1,32 +1,40 @@
 # SubmergePSC 的数字花园
 
-记录技术实践、阅读与日常。内容从个人工程记录和公开项目整理，使用 Markdown 写作，生成静态 HTML。
+基于 **Vue 3 + Vite + Vue Router** 的个人网站，记录技术实践、阅读与日常。文章用 Markdown 写作，由 Node.js 处理，通过 Vite SSG 生成每个页面的静态 HTML。构建和运行均不需要 Python。
 
-站点目标地址：<https://submergepsc.github.io/>。首次发布前需要完成 GitHub Pages 配置。
+完整结构见 [网站完整结构说明](docs/SITE_STRUCTURE.md)，工具扩展见 [工具目录说明](src/tools/README.md)。
 
 ## 本地使用
 
-需要 Python 3.12。依赖固定在 requirements.txt，运行时无需 Node 或数据库。
+需要 Node.js 22.12 或更新版本，推荐 Node.js 22。仓库的 .nvmrc 已指定 22。
 
 ```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-.venv/bin/python build.py
-.venv/bin/python -m http.server 4173 --bind 127.0.0.1 --directory dist
+npm ci
+npm run dev
 ```
 
-打开 <http://127.0.0.1:4173/>。改完内容或页面后重新执行 `build.py` 并刷新。
+打开 <http://127.0.0.1:5173/>。修改 Vue 组件或样式会热更新；修改文章、项目或站点配置会重新准备内容并刷新页面。
+
+## 构建、检查与预览
+
+```bash
+npm test
+npm run build
+npm run preview
+```
+
+生产预览为 <http://127.0.0.1:4174/>。生成结果在 dist/，构建会校验页面、站内链接、资源引用、锚点与 XML。通过 HTTP 服务预览，直接使用 file:// 打开会使根路径资源和模块脚本无法正常工作。
 
 ## 写文章与随记
 
-在 `content/entries/` 新增 Markdown。先写草稿，检查后再设置 `public: true` 与 `draft: false`。两个条件必须同时满足，页面、搜索、RSS、专题和关联链接才会收录。
+在 content/entries/ 新增 Markdown，例如：
 
 ```yaml
 ---
 slug: a-small-observation
 title: 一个具体的观察
 summary: 用一句话介绍这则记录。
-date: '2026-11-05'
+date: '2026-11-07'
 type: note
 category: 阅读札记
 topic: thinking
@@ -35,32 +43,49 @@ stage: seedling
 public: false
 draft: true
 ---
-
-正文从这里开始。
 ```
 
-字段取值：
+frontmatter 后写 Markdown 正文。发布时同时设置 public: true 与 draft: false；其余内容会在渲染和打包前排除，不进入网页、浏览器数据、搜索、RSS 或站点地图。
 
-- `type`：`article` 长文、`note` 短记、`essay` 花园手记、`journal` 日常随记。
-- `topic`：`tech` 技术实践、`thinking` 阅读与思考、`life` 日常生活。
-- `stage`：`seedling` 幼苗、`growing` 生长中、`evergreen` 常青。
-- `updated`：可选，内容修改日期，格式同 `date`。
-- `featured`：可选的首页推荐顺序，`1` 到 `3`；默认不推荐。
-- `project`：可选，关联 `content/projects/` 的文件名。
-- `series`：可选，关联 `content/site.json` 里的专题 ID。
+- type：article 长文、note 短记、essay 花园手记、journal 随记。
+- topic：tech 技术实践、thinking 阅读与思考、life 日常生活。
+- stage：seedling 幼苗、growing 生长中、evergreen 常青。
+- updated：可选更新日期，与 date 格式相同。
+- featured：可选的首页推荐顺序，最多推荐 3 篇。
+- project：可选的关联项目文件名，例如 moon-markdown。
+- series：可选的专题标识，在 content/site.json 中登记。
 
-日期加引号。正文支持常规 Markdown、表格、代码块和脚注。笔记之间使用普通 Markdown 链接；构建时会从公开文章计算反向链接。
+项目介绍放在 content/projects/；公开仓库目录在 content/repositories.json。项目 Markdown 全部参与发布，尚没有独立草稿开关。原始 worklog 和内部整理资料保留在仓库外。
 
-`journal` 会自动出现在随记页。项目资料放在 `content/projects/`，品牌与专题放在 `content/site.json`，公开仓库目录放在 `content/repositories.json`。
+## 修改界面和工具
 
-## 多工具网站
+- src/components/：导航、页脚、文章卡片、Markdown 正文等公共组件。
+- src/pages/：首页、花园、文章、项目、搜索和其他页面。
+- src/tools/：7 个工具组件、登记信息和纯 JavaScript 转换函数。
+- src/styles/：全站、工具箱和 Vue 组件补充样式。
+- public/assets/：图标、项目截图和示意图。
 
-独立的 [tools/ 目录](tools/README.md) 管理 `/tools/` 工具箱与各工具页面，包含 JSON、GitHub 图片直链、Base64、URL、时间戳、文本统计和文本行整理。GitHub 图片工具支持批量转换为 raw 或 jsDelivr 链接，并输出 Markdown / HTML 引用。工具仅在浏览器中处理输入。新增工具按该目录的说明扩展。
+工具输入只在浏览器中处理，不上传、不写 URL 或本地存储。主题偏好单独保存在本地存储中。
 
-## 构建与发布
+## 域名
 
-`build.py` 只读取仓库内的精选内容，输出在 `dist/`。原始 worklog、规划与私人笔记应保留在仓库外。搜索索引包含公开全文，任何写进公开 Markdown 的内容都会随站点发布。
+默认主地址是 https://submergepsc.github.io，在 content/site.json 的 url 中配置。部署时也可以设置构建环境变量 SITE_URL=https://你的域名 来覆盖它，canonical、RSS 和 sitemap 会一同更新。构建脚本读取系统环境变量；仅复制 .env.example 不会自动加载变量。
 
-GitHub Actions 工作流在 PR 中检查构建，在 `main` 更新后构建并发布 `dist/`；首次启用时需将仓库 Settings → Pages → Source 设为 **GitHub Actions**。本地只保留源码，生成产物不提交。
+## GitHub Pages
 
-继续开发可以从 `build.py`、`assets/site.css` 和 `assets/site.js` 开始。常规发布只需改 Markdown 与项目资料。
+.github/workflows/pages.yml 在 PR 中构建检查，main 推送后安装 Node.js 22，执行 npm ci 和 npm run build，上传并发布 dist/。仓库 Settings → Pages → Source 使用 GitHub Actions。
+
+## Cloudflare Workers
+
+仓库的 wrangler.jsonc 已显式指定静态资产目录 dist/，构建命令 npm run build，Worker 名为 submergepsc-github-io。Workers Builds 连接此仓库，生产分支选 main，根目录使用仓库根目录：
+
+| 设置 | 内容 |
+|---|---|
+| Build command | 留空，由 Wrangler 的自定义构建步骤执行 npm run build |
+| Deploy command | npx wrangler deploy |
+| Node.js | 仓库 .nvmrc 指定 22 |
+| 自定义域名 | 部署成功后，在 Worker 的 Settings → Domains & Routes 添加 |
+
+Cloudflare 会按 package-lock.json 安装 Node 依赖。旧 Python 和 Jekyll 构建文件已移除，不再使用 _site。自定义域名还需用户提供，仓库配置不代表 Cloudflare 已成功上线。
+
+如果另外使用 Cloudflare Pages，构建命令为 npm run build，输出目录为 dist，框架选择 None。
