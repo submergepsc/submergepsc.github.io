@@ -1,0 +1,86 @@
+.toolbox-intro { padding-bottom: 35px; }
+.toolbox-toolbar { display: flex; align-items: center; gap: 22px; margin-top: 32px; flex-wrap: wrap; }
+.toolbox-toolbar input { width: min(100%,380px); padding: 12px 15px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; font: 13px var(--sans); }
+.tool-category-filters { display: flex; flex-wrap: wrap; gap: 5px; }
+.tool-directory { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.tool-card { display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--surface); padding: 25px; min-height: 240px; border-radius: 5px; transition: transform .2s,box-shadow .2s; }
+.tool-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.tool-card-top { display: flex; justify-content: space-between; align-items: center; }
+.tool-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--pale); color: var(--green); font: 19px var(--mono); }
+.tool-category { font: 11px var(--sans); color: var(--muted); }
+.tool-card h2 { font: 500 22px/1.6 var(--serif); margin: 20px 0 6px; }
+.tool-card p { font-size: 13px; line-height: 1.8; color: var(--muted); margin: 0 0 20px; }
+.tool-card-link { display: flex; justify-content: space-between; margin-top: auto; font: 11px var(--sans); color: var(--green); }
+.tool-card-link b { font-weight: 400; }
+.tool-empty { margin-top: 25px; color: var(--muted); font-size: 13px; }
+.tool-directory-footer { margin-top: 25px; margin-bottom: 90px; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 11px; }
+.tool-page-heading { padding-top: 40px; padding-bottom: 27px; }
+.tool-page-heading .section-overline { margin-top: 28px; }
+.tool-page-heading h1 { font: 500 clamp(32px,4vw,47px)/1.4 var(--serif); margin: 12px 0; letter-spacing: -.035em; }
+.tool-page-heading > p { margin: 0; font-size: 14px; color: var(--muted); }
+.tool-workspace { border: 1px solid var(--line); background: var(--surface); padding: 28px; border-radius: 6px; }
+.tool-hint { margin: 0 0 22px; font-size: 12px; line-height: 1.9; color: var(--muted); }
+.tool-options { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-bottom: 18px; font-size: 12px; }
+.tool-options label { display: flex; align-items: center; gap: 7px; }
+.tool-workspace select, .tool-workspace input:not([type=checkbox]) { padding: 9px 10px; color: var(--ink); border: 1px solid var(--line); border-radius: 3px; background: var(--paper); font: 13px var(--sans); min-width: 0; }
+.tool-options input[type=checkbox] { accent-color: var(--green); }
+.github-image-options label { flex-wrap: wrap; }
+.github-image-options input { width: 185px; }
+.github-image-advanced { margin: 0 0 22px; color: var(--muted); font: 12px/1.9 var(--sans); }
+.github-image-advanced summary { cursor: pointer; width: fit-content; padding: 4px 0; }
+.github-image-advanced label { display: block; margin: 13px 0 7px; }
+.github-image-advanced input { width: min(100%,320px); }
+.github-image-advanced p { margin: 9px 0 0; }
+.tool-editors { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; }
+.tool-editor { min-width: 0; }
+.tool-editor label { display: block; font: 12px var(--sans); margin-bottom: 9px; }
+.tool-editor textarea { display: block; width: 100%; min-height: 270px; border: 1px solid var(--line); border-radius: 4px; padding: 15px; color: var(--ink); background: var(--paper); resize: vertical; font: 13px/1.85 var(--mono); tab-size: 2; }
+.tool-editor textarea[readonly] { background: var(--pale); }
+.tool-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tool-button { border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); padding: 9px 14px; cursor: pointer; font: 12px var(--sans); line-height: 1.5; }
+.tool-button:hover { border-color: var(--leaf); }
+.tool-button-primary { background: var(--green); border-color: var(--green); color: var(--paper); }
+.tool-button-quiet { color: var(--muted); }
+.tool-status { margin: 20px 0 0; min-height: 24px; font: 12px/1.8 var(--sans); color: var(--muted); overflow-wrap: anywhere; }
+.tool-status.is-error { color: var(--accent); }
+.tool-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 22px 0 0; }
+.tool-metrics div { padding: 18px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.tool-metrics dt { font: 11px/1.8 var(--sans); color: var(--muted); }
+.tool-metrics dd { margin: 8px 0 0; font: 29px/1.5 var(--mono); font-weight: 400; overflow-wrap: anywhere; }
+.time-tool-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 30px; }
+.time-tool-panel { min-width: 0; }
+.time-tool-panel h2 { margin: 0 0 20px; font: 500 21px/1.5 var(--serif); }
+.time-tool-panel > label { display: block; font-size: 12px; margin: 14px 0 8px; }
+.time-tool-panel > input, .time-tool-panel > select { width: 100%; }
+.time-tool-panel .tool-editor { margin: 18px 0 10px; }
+.time-tool-panel textarea { min-height: 125px; height: 125px; font-size: 12px; }
+.tool-input-row { display: grid; grid-template-columns: minmax(0,1fr) 90px; gap: 7px; }
+.tool-zone { margin: 9px 0 0; font-size: 11px; color: var(--muted); }
+.other-tools { padding-top: 35px; padding-bottom: 75px; }
+.other-tools h2 { font: 500 18px var(--serif); margin: 0 0 18px; }
+.other-tools > div { display: flex; flex-wrap: wrap; gap: 12px 22px; }
+.other-tools a { font-size: 12px; color: var(--green); }
+@media(max-width:900px) {
+  .tool-directory { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  .tool-directory { grid-template-columns: 1fr; }
+  .tool-card { min-height: 205px; padding: 22px; }
+  .tool-card h2 { font-size: 21px; margin-top: 17px; }
+  .toolbox-toolbar { gap: 14px; margin-top: 23px; }
+  .toolbox-toolbar input { width: 100%; }
+  .tool-directory-footer { flex-direction: column; gap: 5px; margin-bottom: 65px; }
+  .tool-page-heading { padding-top: 30px; }
+  .tool-page-heading h1 { font-size: 32px; }
+  .tool-workspace { padding: 18px; }
+  .tool-editors, .time-tool-grid { grid-template-columns: 1fr; gap: 20px; }
+  .tool-editor textarea { min-height: 200px; font-size: 12px; padding: 12px; }
+  .tool-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .tool-metrics div { padding: 12px; }
+  .tool-metrics dd { font-size: 25px; }
+  .tool-options { gap: 12px; }
+  .tool-button { padding: 9px 12px; }
+  .time-tool-panel + .time-tool-panel { border-top: 1px solid var(--line); padding-top: 24px; }
+  .time-tool-panel textarea { min-height: 125px; }
+  .tool-workspace input[type=datetime-local] { max-width: 100%; }
+}

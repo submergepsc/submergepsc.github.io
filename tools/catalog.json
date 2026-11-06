@@ -1,0 +1,9 @@
+[
+  {"slug":"json","title":"JSON 格式化","category":"开发","mark":"{ }","description":"校验、缩进和压缩 JSON，保留原数字写法。","keywords":["JSON","格式化","压缩","校验"]},
+  {"slug":"github-image","title":"GitHub 图片直链","category":"图片","mark":"↗","description":"把 GitHub 图片链接转换为原图或 CDN 直链，生成 Markdown 和 HTML。","keywords":["GitHub","图床","图片","直链","raw","jsDelivr","Markdown"]},
+  {"slug":"base64","title":"Base64 编解码","category":"编码","mark":"64","description":"UTF-8 文本与 Base64 互转，支持 URL 安全格式。","keywords":["Base64","UTF-8","编码","解码"]},
+  {"slug":"url","title":"URL 编解码","category":"编码","mark":"%","description":"对 URL 参数值编码或解码，处理中文和特殊字符。","keywords":["URL","URI","百分号","编码"]},
+  {"slug":"timestamp","title":"时间戳转换","category":"时间","mark":"↔","description":"秒、毫秒与日期互转，同时查看 UTC 和本地时间。","keywords":["Unix","时间戳","日期","UTC"]},
+  {"slug":"text-stats","title":"文本统计","category":"文本","mark":"Aa","description":"查看字符、字素、行数、词段与 UTF-8 字节数。","keywords":["字数","字符","行数","统计"]},
+  {"slug":"line-cleaner","title":"文本行整理","category":"文本","mark":"≡","description":"按行去重、去除空行和首尾空白，或重新排序。","keywords":["去重","排序","空行","文本"]}
+]

@@ -1,0 +1,13 @@
+{
+  "brand": "SubmergePSC",
+  "subtitle": "一座记录技术、阅读与日常的数字花园。",
+  "tagline": "把学到的、想到的、经历的，慢慢留下来。",
+  "author": "submergepsc",
+  "github": "https://github.com/submergepsc",
+  "notice": "这里的笔记会继续生长。欢迎沿着主题慢慢逛。",
+  "themes": ["技术实践", "阅读与思考", "日常生活"],
+  "series": {
+    "agent-notes": {"title": "Agent 的执行与输出", "summary": "从一个可观察的小任务出发，理解动作、状态、事件与日志。"},
+    "moon-markdown": {"title": "Moon Markdown 实现笔记", "summary": "围绕一个小型渲染器，整理入口、语法范围和边界处理。"}
+  }
+}
