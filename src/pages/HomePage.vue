@@ -3,7 +3,7 @@ import { site, entries, projects } from '../data.js'
 import { usePageHead } from '../composables/usePageHead.js'
 import EntryCard from '../components/EntryCard.vue'
 import ProjectCard from '../components/ProjectCard.vue'
-usePageHead('数字花园')
+usePageHead('个人主页')
 const featured = entries
   .filter((e) => e.featured)
   .sort((a, b) => a.featured - b.featured)
@@ -11,46 +11,46 @@ const featured = entries
 const recent = entries.filter((e) => !featured.includes(e)).slice(0, 4)
 const topics = [
   {
-    name: '技术实践',
+    name: '技术笔记',
     mark: '⌘',
     index: '01 / MAKING',
     cls: 'map-tech',
-    href: '/garden/?topic=tech',
-    description: '项目、代码、测试，以及解决问题的过程。',
-    note: '从真实的尝试开始 ↗',
+    href: '/garden/',
+    description: '代码、测试与实验中的方法和思考。',
+    note: '阅读笔记 ↗',
   },
   {
-    name: '阅读与思考',
+    name: '项目实践',
     mark: '⌁',
-    index: '02 / THINKING',
+    index: '02 / PROJECTS',
     cls: 'map-reading',
-    href: '/garden/?topic=thinking',
-    description: '在读的内容、还没想完的问题和新的联系。',
-    note: '收集正在长大的想法 ↗',
+    href: '/projects/',
+    description: '渲染器、数据绘图和时间序列实验。',
+    note: '查看项目 ↗',
   },
   {
-    name: '日常生活',
+    name: '实用工具',
     mark: '✳',
-    index: '03 / LIVING',
+    index: '03 / TOOLS',
     cls: 'map-life',
-    href: '/journal/',
-    description: '值得记住的片刻，一点自己的观察。',
-    note: '留个位置给下一则随记 ↗',
+    href: '/tools/',
+    description: '图片链接、编码转换与文本整理。',
+    note: '打开工具箱 ↗',
   },
 ]
 </script>
 <template>
   <section class="hero shell">
     <div class="hero-copy">
-      <div class="hero-eyebrow"><span class="live-dot" />一座正在生长的个人花园</div>
+      <div class="hero-eyebrow"><span class="live-dot" />SubmergePSC · 个人主页</div>
       <h1>
         <span class="hero-line">把学到的、</span><span class="hero-line">想到的、经历的，</span
         ><span class="hero-line">慢慢留下来。</span>
       </h1>
-      <p class="hero-subtitle">{{ site.subtitle }} 有些记录是完整文章，有些只是一个起点。</p>
+      <p class="hero-subtitle">{{ site.subtitle }} 欢迎浏览我的笔记与公开项目。</p>
       <div class="hero-actions">
-        <RouterLink class="button button-dark" to="/garden/">逛逛花园 <span>↗</span></RouterLink
-        ><RouterLink class="text-link" to="/about/">认识园丁 →</RouterLink>
+        <RouterLink class="button button-dark" to="/projects/">查看项目 <span>↗</span></RouterLink
+        ><RouterLink class="text-link" to="/about/">关于我 →</RouterLink>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -91,9 +91,9 @@ const topics = [
     <div class="latest-layout shell">
       <div class="latest-intro">
         <span class="section-overline">RECENTLY PLANTED <span>最近种下</span></span>
-        <h2>一些还在<br />生长的记录。</h2>
-        <p>想法会更新，笔记也会变。这里留下它们此刻的样子。</p>
-        <RouterLink class="quiet-link" to="/garden/">漫步所有笔记 ↗</RouterLink>
+        <h2>精选<br />技术笔记。</h2>
+        <p>整理项目实践中的方法、设计取舍与学习心得。</p>
+        <RouterLink class="quiet-link" to="/garden/">阅读全部笔记 ↗</RouterLink>
       </div>
       <div class="featured-grid">
         <EntryCard v-for="entry in featured" :key="entry.slug" :entry="entry" featured />
@@ -104,7 +104,7 @@ const topics = [
     <div class="section-heading">
       <div>
         <span class="section-overline">A WALK THROUGH NOTES <span>最近更新</span></span>
-        <h2>最近留下的脚印。</h2>
+        <h2>最近更新的笔记。</h2>
       </div>
       <RouterLink class="quiet-link" to="/garden/">全部记录 ↗</RouterLink>
     </div>
@@ -137,10 +137,10 @@ const topics = [
   <section class="now-card shell">
     <div class="now-mark">✳</div>
     <div>
-      <span class="section-overline">A SMALL NOTE TO SELF</span>
-      <h2>慢一点也没关系，<br />花园本来就是慢慢长的。</h2>
-      <p>你可以从一则短记开始，再沿着它找到相关的文章与项目。</p>
+      <span class="section-overline">THE TOOLBOX</span>
+      <h2>随手可用的，<br />几个小工具。</h2>
+      <p>转换图片链接、处理 JSON、整理文本，直接在浏览器里完成。</p>
     </div>
-    <RouterLink class="button button-outline" to="/now/">此刻在做什么 ↗</RouterLink>
+    <RouterLink class="button button-outline" to="/tools/">打开工具箱 ↗</RouterLink>
   </section>
 </template>

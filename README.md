@@ -1,6 +1,6 @@
 # SubmergePSC 的数字花园
 
-基于 **Vue 3 + Vite + Vue Router** 的个人网站，记录技术实践、阅读与日常。文章用 Markdown 写作，由 Node.js 处理，通过 Vite SSG 生成每个页面的静态 HTML。构建和运行均不需要 Python。
+基于 **Vue 3 + Vite + Vue Router** 的个人网站，用于项目展示、技术笔记与在线工具。文章用 Markdown 写作，由 Node.js 处理，通过 Vite SSG 生成每个页面的静态 HTML。构建和运行均不需要 Python。
 
 完整结构见 [网站完整结构说明](docs/SITE_STRUCTURE.md)，工具扩展见 [工具目录说明](src/tools/README.md)。
 
@@ -25,7 +25,7 @@ npm run preview
 
 生产预览为 <http://127.0.0.1:4174/>。生成结果在 dist/，构建会校验页面、站内链接、资源引用、锚点与 XML。通过 HTTP 服务预览，直接使用 file:// 打开会使根路径资源和模块脚本无法正常工作。
 
-## 写文章与随记
+## 写技术笔记
 
 在 content/entries/ 新增 Markdown，例如：
 
@@ -55,7 +55,7 @@ frontmatter 后写 Markdown 正文。发布时同时设置 public: true 与 draf
 - project：可选的关联项目文件名，例如 moon-markdown。
 - series：可选的专题标识，在 content/site.json 中登记。
 
-项目介绍放在 content/projects/；公开仓库目录在 content/repositories.json。项目 Markdown 全部参与发布，尚没有独立草稿开关。原始 worklog 和内部整理资料保留在仓库外。
+项目介绍放在 content/projects/；公开仓库目录在 content/repositories.json。项目 Markdown 全部参与发布，尚没有独立草稿开关。未公开的写作素材保留在仓库外。
 
 ## 修改界面和工具
 
@@ -86,6 +86,6 @@ frontmatter 后写 Markdown 正文。发布时同时设置 public: true 与 draf
 | Node.js | 仓库 .nvmrc 指定 22 |
 | 自定义域名 | 部署成功后，在 Worker 的 Settings → Domains & Routes 添加 |
 
-Cloudflare 会按 package-lock.json 安装 Node 依赖。旧 Python 和 Jekyll 构建文件已移除，不再使用 _site。自定义域名还需用户提供，仓库配置不代表 Cloudflare 已成功上线。
+Cloudflare 会按 package-lock.json 安装 Node 依赖。旧 Python 和 Jekyll 构建文件已移除，不再使用 _site。使用自定义域名时，在部署平台绑定域名并同步设置 SITE_URL。
 
 如果另外使用 Cloudflare Pages，构建命令为 npm run build，输出目录为 dist，框架选择 None。

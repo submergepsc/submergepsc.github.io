@@ -9,7 +9,7 @@ import ToolIndex from './pages/ToolsPage.vue'
 import Tool from './pages/ToolPage.vue'
 import Search from './pages/SearchPage.vue'
 import Collections from './pages/CollectionsPage.vue'
-import Info from './pages/InfoPage.vue'
+import About from './pages/AboutPage.vue'
 import NotFound from './pages/NotFoundPage.vue'
 
 export const routes = [
@@ -19,11 +19,7 @@ export const routes = [
   { path: '/projects/repositories/', component: Repositories },
   { path: '/tools/', component: ToolIndex },
   { path: '/search/', component: Search },
-  ...['journal', 'about', 'now'].map((kind) => ({
-    path: `/${kind}/`,
-    component: Info,
-    props: { kind },
-  })),
+  { path: '/about/', component: About },
   ...['series', 'archive'].map((kind) => ({
     path: `/${kind}/`,
     component: Collections,

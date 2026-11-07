@@ -22,7 +22,7 @@ usePageHead('项目', '从真实代码、公开仓库与工程记录出发的项
   </section>
   <section class="project-note shell">
     <RouterLink class="quiet-link" to="/projects/repositories/"
-      >查看全部公开仓库与学习足迹 ↗</RouterLink
+      >查看精选代码仓库 ↗</RouterLink
     >
   </section>
 </template>

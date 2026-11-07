@@ -1,7 +1,7 @@
 ---
 slug: timesfm-experiment
 title: TimesFM 滚动回测
-summary: 在第三方模型上做一组 ETTh1 预测实验，比较基线并保留逐窗口结果。
+summary: 基于 TimesFM 进行 ETTh1 时间序列评估，比较季节性基线并保留逐窗口输出。
 label: REPRODUCTION · TIMESFM
 status: 复现实验
 repository: https://github.com/submergepsc/timesfm
@@ -22,7 +22,7 @@ facts:
 
 实验同时输出汇总指标、逐窗口指标、逐小时预测值和一个示例图。这样可以从总分向下追到具体窗口，而不会只剩下一张表现不错的曲线。
 
-设计和当时的结果见 [从最后一个窗口，到一组滚动回测](/articles/timesfm-rolling-backtest/)。
+评估设计见 [从单次预测到滚动回测](/articles/timesfm-rolling-backtest/)。
 
 ## 上游与个人工作
 

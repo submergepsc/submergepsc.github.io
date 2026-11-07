@@ -1,12 +1,11 @@
 <script setup>
 import { site } from '../data.js'
 const links = [
-  ['/garden/', '漫步花园'],
-  ['/journal/', '随记'],
+  ['/garden/', '技术笔记'],
+  ['/projects/', '项目'],
   ['/tools/', '工具箱'],
   ['/series/', '专题'],
   ['/archive/', '归档'],
-  ['/now/', '近况'],
 ]
 </script>
 <template>

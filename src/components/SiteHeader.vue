@@ -6,10 +6,9 @@ const open = ref(false),
   dark = ref(false)
 const links = [
   ['/', '首页'],
-  ['/garden/', '花园'],
+  ['/garden/', '笔记'],
   ['/projects/', '项目'],
   ['/tools/', '工具箱'],
-  ['/journal/', '随记'],
   ['/about/', '关于'],
 ]
 const active = (href) =>

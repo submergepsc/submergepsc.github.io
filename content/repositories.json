@@ -1,34 +1,10 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-07",
   "repositories": [
-    {
-      "name": "a_sample_website",
-      "url": "https://github.com/submergepsc/a_sample_website",
-      "summary": "早期静态单页网站尝试",
-      "group": "项目与实验"
-    },
-    {
-      "name": "app1",
-      "url": "https://github.com/submergepsc/app1",
-      "summary": "基于 AI Studio 脚手架的前端尝试",
-      "group": "项目与实验"
-    },
-    {
-      "name": "FlightSystem",
-      "url": "https://github.com/submergepsc/FlightSystem",
-      "summary": "Qt 航班票务团队项目；个人分工待整理",
-      "group": "项目与实验"
-    },
     {
       "name": "moonbit",
       "url": "https://github.com/submergepsc/moonbit",
       "summary": "Moon Markdown：MoonBit 渲染器、CLI 与浏览器入口",
-      "group": "项目与实验"
-    },
-    {
-      "name": "oiwiki_changed_frontend",
-      "url": "https://github.com/submergepsc/oiwiki_changed_frontend",
-      "summary": "OI Wiki 离线页面、资源与搜索前端；内容来自原站",
       "group": "项目与实验"
     },
     {
@@ -38,124 +14,22 @@
       "group": "项目与实验"
     },
     {
-      "name": "ct",
-      "url": "https://github.com/submergepsc/ct",
-      "summary": "C++ 数据结构相关练习目录",
-      "group": "学习与练习"
-    },
-    {
-      "name": "gitLearning",
-      "url": "https://github.com/submergepsc/gitLearning",
-      "summary": "Git 与代码托管平台学习",
-      "group": "学习与练习"
-    },
-    {
-      "name": "JuniorPT",
-      "url": "https://github.com/submergepsc/JuniorPT",
-      "summary": "C++ 课堂与实训练习",
-      "group": "学习与练习"
-    },
-    {
-      "name": "project1_DS",
-      "url": "https://github.com/submergepsc/project1_DS",
-      "summary": "Qt / C++ 数据结构课程项目",
-      "group": "学习与练习"
-    },
-    {
-      "name": "imgur",
-      "url": "https://github.com/submergepsc/imgur",
-      "summary": "笔记图片资源",
-      "group": "资料与站点"
-    },
-    {
-      "name": "obsidian_notes",
-      "url": "https://github.com/submergepsc/obsidian_notes",
-      "summary": "Obsidian 知识库与资料归档；博客另选公开内容",
-      "group": "资料与站点"
-    },
-    {
-      "name": "submergepsc",
-      "url": "https://github.com/submergepsc/submergepsc",
-      "summary": "GitHub profile 介绍",
-      "group": "资料与站点"
-    },
-    {
-      "name": "submergepsc.github.io",
-      "url": "https://github.com/submergepsc/submergepsc.github.io",
-      "summary": "这座数字花园的源码仓库",
-      "group": "资料与站点"
-    },
-    {
-      "name": "algorithm-journey",
-      "url": "https://github.com/submergepsc/algorithm-journey",
-      "summary": "Fork 自 algorithmzuo/algorithm-journey",
-      "group": "Fork 与上游学习"
-    },
-    {
-      "name": "blocked-sites-in-south-korea",
-      "url": "https://github.com/submergepsc/blocked-sites-in-south-korea",
-      "summary": "Fork 自 wpzzz/blocked-sites-in-south-korea",
-      "group": "Fork 与上游学习"
-    },
-    {
-      "name": "mimi3",
-      "url": "https://github.com/submergepsc/mimi3",
-      "summary": "Fork 自 wkeqin/mimi3",
-      "group": "Fork 与上游学习"
+      "name": "FlightSystem",
+      "url": "https://github.com/submergepsc/FlightSystem",
+      "summary": "Qt / C++ 航班票务团队项目",
+      "group": "项目与实验"
     },
     {
       "name": "timesfm",
       "url": "https://github.com/submergepsc/timesfm",
-      "summary": "Fork 自 google-research/timesfm；有个人 rolling backtest 实验",
-      "group": "Fork 与上游学习"
+      "summary": "基于 Google Research TimesFM 的时间序列评估实验（fork）",
+      "group": "复现与学习"
     },
     {
-      "name": "WeChatMsg",
-      "url": "https://github.com/submergepsc/WeChatMsg",
-      "summary": "Fork 自 LC044/WeChatMsg",
-      "group": "Fork 与上游学习"
-    },
-    {
-      "name": "WeSpy",
-      "url": "https://github.com/submergepsc/WeSpy",
-      "summary": "Fork 自 tianchangNorth/WeSpy",
-      "group": "Fork 与上游学习"
-    },
-    {
-      "name": "codexTemp",
-      "url": "https://github.com/submergepsc/codexTemp",
-      "summary": "盘点时为空仓库",
-      "group": "早期与占位"
-    },
-    {
-      "name": "for_codex_2",
-      "url": "https://github.com/submergepsc/for_codex_2",
-      "summary": "README 与 LICENSE 骨架",
-      "group": "早期与占位"
-    },
-    {
-      "name": "googleAIstudio",
-      "url": "https://github.com/submergepsc/googleAIstudio",
-      "summary": "盘点时为空仓库",
-      "group": "早期与占位"
-    },
-    {
-      "name": "moonbit_demo",
-      "url": "https://github.com/submergepsc/moonbit_demo",
-      "summary": "盘点时为空仓库",
-      "group": "早期与占位"
-    },
-    {
-      "name": "repos1",
-      "url": "https://github.com/submergepsc/repos1",
-      "summary": "最早的仓库记录",
-      "group": "早期与占位"
-    },
-    {
-      "name": "tempfs",
-      "url": "https://github.com/submergepsc/tempfs",
-      "summary": "航班系统临时仓库，与主项目关联",
-      "group": "早期与占位"
+      "name": "submergepsc.github.io",
+      "url": "https://github.com/submergepsc/submergepsc.github.io",
+      "summary": "个人主页与在线工具箱，使用 Vue 3 和 Vite 构建",
+      "group": "网站与工具"
     }
   ]
 }

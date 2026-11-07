@@ -13,7 +13,7 @@ date: '2026-11-05'
 public: true
 draft: false
 topic: tech
-featured: 0
+featured: 2
 project: rwa-plots
 ---
 

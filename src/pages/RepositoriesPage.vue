@@ -2,7 +2,7 @@
 import { repositories } from '../data.js'
 import PageIntro from '../components/PageIntro.vue'
 import { usePageHead } from '../composables/usePageHead.js'
-usePageHead('公开仓库与学习足迹')
+usePageHead('精选代码仓库')
 const groups = [...new Set(repositories.repositories.map((r) => r.group))].map((name) => ({
   name,
   repos: repositories.repositories.filter((r) => r.group === name),
@@ -10,11 +10,11 @@ const groups = [...new Set(repositories.repositories.map((r) => r.group))].map((
 </script>
 <template>
   <PageIntro
-    title="公开仓库，"
-    accent="学习足迹。"
-    description="这里也放练习、资料、fork 与早期尝试。仓库只是一个入口，整理好的内容会慢慢长成项目笔记。"
+    title="精选项目，"
+    accent="从代码开始。"
+    description="这里列出主页相关的公开项目。团队项目与上游 fork 会在说明中标注。"
     ><span class="section-overline"
-      >整理于 {{ repositories.updated }} · {{ repositories.repositories.length }} 个公开仓库</span
+      >{{ repositories.repositories.length }} 个精选仓库</span
     ></PageIntro
   >
   <div class="repository-directory shell">

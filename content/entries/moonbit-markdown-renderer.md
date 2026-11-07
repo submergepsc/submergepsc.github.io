@@ -39,7 +39,7 @@ let html = render("# Title\nHello [`MoonBit`](https://www.moonbitlang.com)")
 
 ## 从功能到验证
 
-仓库包含 renderer 源码、测试、CLI、Web 页面和输入输出示例。2026 年 6 月的功能记录中，图片语法、图片属性转义和残缺语法回退分别有测试；当时也运行了 `moon check`、`moon test`、浏览器目标构建和 CLI 示例。
+仓库包含 renderer 源码、测试、CLI、Web 页面和输入输出示例。图片语法、属性转义和残缺语法回退等边界可以通过这些示例逐项检查。
 
 这种组织方式把“一个功能能用”拆得更具体：正常输入产生什么 HTML，属性里的特殊字符怎样处理，输入写到一半又应该怎样回退。
 

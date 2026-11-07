@@ -20,6 +20,7 @@ const filters = computed(() =>
   ),
 )
 const categories = [...new Set(entries.map((e) => e.category))].sort()
+const availableTypes = Object.entries(typeNames).filter(([type]) => entries.some((e) => e.type === type))
 const shown = computed(() =>
   entries.filter((e) =>
     keys.every(
@@ -64,7 +65,7 @@ function select(key, value) {
     <div class="filter-bar">
       <div class="filter-group" aria-label="内容类型">
         <button
-          v-for="[key, label] in [['', '全部'], ...Object.entries(typeNames)]"
+          v-for="[key, label] in [['', '全部'], ...availableTypes]"
           :key="key"
           class="filter-chip"
           :class="{ 'is-selected': filters.type === key }"
