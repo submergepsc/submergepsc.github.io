@@ -197,7 +197,7 @@ npm run build
 
 Python已从构建链路移除。Node.js也只在开发和构建时运行，线上不需要常驻Node服务。
 
-开发时执行npm run dev，Vite在http://127.0.0.1:5173/运行并热更新。修改content/文章或配置会自动重新处理并刷新页面。生产构建为npm run build，npm run preview在http://127.0.0.1:4174/预览dist。
+开发时执行 npm run dev，在浏览器打开终端打印的 Local 地址。修改组件和样式会热更新；修改 content/ 文章或配置会自动重新处理并刷新页面。生产构建使用 npm run build，预览使用 npm run preview，访问地址以终端输出为准。完整操作见[开发与维护](DEVELOPMENT.md)。
 
 ## 9. 构建产物与部署
 
